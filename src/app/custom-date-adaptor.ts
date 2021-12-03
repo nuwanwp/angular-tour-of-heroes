@@ -7,13 +7,13 @@ export class FedDateAdapter extends NativeDateAdapter {
 
     date.setMinutes( date.getMinutes() + date.getTimezoneOffset() );
 
-    return moment(date).format('DD/MM/YYYY');
+    return moment(date).format('M/D/YYYY');
   }
 
   parse(value: any): Date | null {
-    if (!moment(value, 'DD/MM/YYYY', true).isValid()) {
+    if (!moment(value, 'M/D/YYYY', true).isValid()) {
       return super.invalid();
     }
-    return moment(value, 'DD/MM/YYYY', true).toDate();
+    return moment(value, 'M/D/YYYY', true).toDate();
   }
 }
