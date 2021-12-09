@@ -6,4 +6,33 @@
   </mat-datepicker-toggle>
   <mat-datepicker #picker></mat-datepicker>
 </mat-form-field>
+<div class="bulk-request-wrapper">
+  <div class="slider">
+    <mat-slider
+      thumbLabel
+      [style]="'width:100%'"
+      [displayWith]="formatLabel"
+      tickInterval="1000"
+      step="1"
+      min="0"
+      max="100"
+      [(ngModel)]="numberOfRequests"
+      aria-label="units"></mat-slider>
+    <button mat-raised-button (click)="triggerLoadTest()">Send Request</button>
+  </div>
+  <div>
+    <mat-form-field class="example-form-field" appearance="fill">
+      <mat-label>Authz token</mat-label>
+      <input matInput type="text" [(ngModel)]="authzToken">
+      <button *ngIf="authzToken" matSuffix mat-icon-button aria-label="Clear" (click)="authzToken=''">
+        <mat-icon>close</mat-icon>
+      </button>
+    </mat-form-field>
+  </div>
+
+  <div class="request-details">
+
+  </div>
+</div>
+
 

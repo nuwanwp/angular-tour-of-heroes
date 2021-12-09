@@ -1,4 +1,7 @@
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import {Injector, LOCALE_ID, NgModule} from '@angular/core';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSliderModule } from '@angular/material/slider';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -30,7 +33,10 @@ import {registerLocaleData} from '@angular/common';
     MatNativeDateModule,
     MatIconModule,
     MatInputModule,
-    PlatformModule
+    PlatformModule,
+    MatSliderModule,
+    HttpClientModule,
+    MatButtonModule
   ],
   providers: [
     MatNativeDateModule,
