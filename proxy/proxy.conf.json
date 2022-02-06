@@ -1,0 +1,13 @@
+{
+  "/authority/": {
+    "target": "http://192.168.2.111:9999/",
+    "secure": false,
+    "logLevel": "info",
+    "headers": {
+      "authorization": "d3ec85f7ff854df39df06c5757821228"
+    },
+    "pathRewrite": {
+      "/authority": ""
+    }
+  }
+}
